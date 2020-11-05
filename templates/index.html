@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid" style="padding-top: 25px;text-align: center">
+  <div class="container">
+    <h1>Superstore Dataset</h1>      
+  </div>
+</div>
+
+			
+<form 
+method=POST  
+enctype=multipart/form-data 
+action="{{ url_for('dataupload') }}"
+	>
+	<div class="form-group">
+		<div class="custom-file">
+			<input oninput="filesize(this);" type="file" name="csv_data" class="custom-file-input" >
+			<label class="custom-file-label" for="csv_data">Choose a csv file...</label>
+			
+			
+		
+		</div>
+	</div>
+	<div class="wrapper">
+    <input class="btn btn-info"  type="submit" value="Upload File"> 
+  </div>
+	</form>	
+
+
+{% endblock content %}

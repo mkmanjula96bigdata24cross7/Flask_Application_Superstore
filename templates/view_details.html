@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+			<br>
+  
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="{{ url_for('index')}}">Home</a>
+      <a class="nav-item nav-link" href="{{ url_for('charts') }}">Dashboard</a>
+      <a class="nav-item nav-link" href="{{ url_for('dataupload') }}">View Data</a>
+      <a class="nav-item nav-link" href="#"></a>
+      <a class="nav-item nav-link" href="#"></a>
+    </div>
+
+</nav>
+  </body>
+
+   
+
+<br>
+
+
+
+<div class="painel-dados">
+	
+<div>
+	
+	<p>{{ df_describe.to_html(table_id="enhaced-table") | safe }}</p>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock content %}
+
