@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<br><br>
 <div class="jumbotron jumbotron-fluid" style="padding-top: 25px;text-align: center">
   <div class="container">
-    <h1>Superstore Dataset</h1>      
+    <h1>Flask Application | Superstore Sales </h1>      
   </div>
 </div>
 
-			
-<form 
+<div class="card">
+  <img src="static/images/upload.png" alt="Avatar" style="width:15%;height:15%">
+  <div class="container">
+    <h4><b>Upload Files</b></h4>
+    
+	<form 
 method=POST  
 enctype=multipart/form-data 
 action="{{ url_for('dataupload') }}"
@@ -27,6 +31,12 @@ action="{{ url_for('dataupload') }}"
     <input class="btn btn-info"  type="submit" value="Upload File"> 
   </div>
 	</form>	
+	
+	
+  </div>
+</div>
+			
+
 
 
 {% endblock content %}
